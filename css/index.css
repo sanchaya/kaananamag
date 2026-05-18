@@ -1327,9 +1327,9 @@ input[type="submit"].btn.btn-mini {
 */
 body {
   padding-top: 140px;
-  background-color: #323330;
+  background-color: #e8f5e9;
   background-attachment: fixed;
-  color: white;
+  color: #2c3e2c;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
 }
@@ -1394,10 +1394,12 @@ footer {
   height: 70px;
   padding-bottom: 10px;
   overflow: hidden;
+  color: #000;
 }
 .booksection p.level {
   font-size: 10px;
   margin-bottom: 20px;
+  color: #333;
 }
 .booksection .view {
   display: block;
@@ -1439,7 +1441,7 @@ h4 {
   text-transform: uppercase;
   font: 400 16px 'Open Sans Condensed', sans-serif;
   line-height: 18px;
-  color: #efa121;
+  color: #2e7d32;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1450,11 +1452,11 @@ h3 {
 h3 a {
   text-decoration: underline;
   font: normal 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #cfb798;
+  color: #555;
 }
 h3 a:hover,
 h3 a:active {
-  color: #cfb798;
+  color: #2e7d32;
 }
 hr {
   margin: 8px 0;
@@ -1466,8 +1468,8 @@ a#infos {
   right: 50px;
   top: 50%;
   margin-top: -13px;
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  color: #2c3e2c;
+  text-shadow: none;
   font: bold 26px Arial, Helvetica, sans-serif;
   line-height: 26px;
   -webkit-transition: color .3s linear;
@@ -1478,7 +1480,92 @@ a#infos {
 }
 a#infos:hover {
   text-decoration: none;
-  color: #1a1a1a;
+  color: #2e7d32;
+}
+#brandlogo {
+  display: inline-block;
+  vertical-align: middle;
+}
+#brandlogo img {
+  display: block;
+  height: 60px;
+  width: auto;
+}
+#brandtext {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 15px;
+}
+#brandtext a {
+  display: block;
+  font: bold 22px 'Open Sans Condensed', sans-serif;
+  color: #2f2e2d;
+  text-decoration: none;
+  text-shadow: 1px 0 1px rgba(255, 255, 255, 0.6);
+}
+#brandtext a:hover {
+  color: #efa121;
+}
+#brandtext .tagline {
+  display: block;
+  font: normal 12px 'Open Sans', sans-serif;
+  color: #666;
+}
+.navlinks {
+  display: inline-block;
+  vertical-align: middle;
+}
+.navlinks a {
+  color: #9e8c09;
+  font-size: 12px;
+  text-decoration: none;
+}
+.navlinks a:hover {
+  text-decoration: underline;
+  color: #efa121;
+}
+.partner-logos {
+  display: none;
+  flex-wrap: nowrap;
+  gap: 24px;
+  margin-top: 10px;
+  align-items: center;
+  overflow-x: auto;
+  background: rgba(46, 125, 50, 0.08);
+  border: 1px solid rgba(46, 125, 50, 0.15);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+.partner-logos.open {
+  display: flex !important;
+}
+.partner-logos a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #2c3e2c;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.partner-logos a:hover {
+  color: #2e7d32;
+  transform: scale(1.05);
+}
+.partner-logos a img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.partner-logos a span {
+  font: normal 11px 'Open Sans', sans-serif;
+  white-space: nowrap;
+  text-align: center;
 }
 #twittit {
   position: absolute;
@@ -1488,19 +1575,22 @@ a#infos:hover {
 }
 #jsinfos {
   padding: 10px 20px;
-  background: rgba(240, 240, 240, 0.2);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 4px;
   margin-bottom: 50px;
-  box-shadow: 0 0 4px white;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
 }
 #jsinfos h4 {
   margin-bottom: 4px;
-  color: #f7df1e;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  color: #1a1a1a;
+  text-shadow: none;
+}
+#jsinfos h4 a {
+  color: #2e7d32;
 }
 #jsinfos p,
 #jsinfos a {
-  color: rgba(255, 255, 255, 0.9);
+  color: #000;
   text-decoration: none;
 }
 #jsinfos a:hover {
@@ -1533,6 +1623,10 @@ a#infos:hover {
 .footer p,
 .footer a {
   font-size: 10px;
+  color: #555;
+}
+.footer p a {
+  color: #2e7d32;
 }
 .recrutement {
   color: #eedb59;
@@ -1553,11 +1647,26 @@ a#infos:hover {
 }
 .pythonbooks {
   background-color: transparent;
-  margin: 0;
+  margin: 0 0 15px;
 }
-.pythonbooks > * {
+.pythonbooks > p,
+.pythonbooks > a,
+.pythonbooks > img,
+.pythonbooks > span {
   display: inline;
   margin-right: 10px;
+}
+#seeAlsoToggle {
+  color: #388e3c;
+  font: bold 14px 'Open Sans Condensed', sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+#seeAlsoToggle:hover {
+  color: #2e7d32;
+  text-decoration: underline;
 }
 #filterBy {
   float: left;
@@ -1573,10 +1682,11 @@ a#infos:hover {
   margin-left: 0;
 }
 #filterBy a {
-  color: #eedb59;
+  color: #388e3c;
 }
  #filterBy .active {
-  color: #fff;
+  color: #2c3e2c;
+  font-weight: bold;
 }
 /*!
  * Bootstrap Responsive v2.0.4
@@ -1721,6 +1831,27 @@ a#infos:hover {
   #twittit {
     display: none;
   }
+  #brandtext .tagline {
+    display: none;
+  }
+  .navlinks {
+    display: none;
+  }
+  .partner-logos {
+    gap: 16px;
+    padding: 10px 12px;
+  }
+  .partner-logos a img {
+    width: 36px;
+    height: 36px;
+  }
+  .partner-logos a span {
+    font-size: 9px;
+  }
+  .partner-logos.open {
+    display: flex !important;
+    flex-wrap: wrap;
+  }
 }
 @media (max-width: 767px) {
   body {
@@ -1783,11 +1914,24 @@ a#infos:hover {
     width: auto;
   }
   .jshead {
-    height: 50px;
+    height: auto;
+    padding: 5px 0;
   }
   .jshead img {
-    max-width: 140px;
-    max-height: 40px;
+    max-width: 120px;
+    max-height: 35px;
+  }
+  #brandtext {
+    margin: 0 8px;
+  }
+  #brandtext a {
+    font-size: 16px;
+  }
+  #brandtext .tagline {
+    display: none;
+  }
+  .navlinks {
+    display: none;
   }
   h1 {
     font: normal 14px 'Open Sans Condensed', sans-serif;
