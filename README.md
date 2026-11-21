@@ -4,4 +4,4 @@ Digital archive hosted at **https://digital.kaananamag.in**
 
 Published by ವೈಲ್ಡ್ ಲೈಫ್ ಕನ್ಸರ್ವೆಷನ್ ಗ್ರೂಪ್. Items come from Internet Archive query:
 
-    identifier:(kaanana* OR "Kaanana_Apr2020" OR "KannanaMay2020")
+    collection:ServantsOfKnowledge AND identifier:(kaanana* OR "Kaanana_Apr2020" OR "KannanaMay2020")
